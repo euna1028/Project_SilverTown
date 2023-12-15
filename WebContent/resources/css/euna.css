@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+#euna{
+	margin-left:auto;
+	margin-right:auto;
+	width: 60%;
+	height: 180px;
+	padding-top: 30px;
+}
+
+.eunaChat img{
+	padding-left: 10px;
+	width: 160px;
+	cursor: pointer;
+}
+
+.eunaMap {
+	width: 500px;
+	padding-left: 20px;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(23,84,241,1) 0%, rgba(0,247,252,1) 100%);
+	border-radius: 30px;
+	cursor: pointer;
+	box-shadow: 3px 3px 4px #555555;
+}
+
+.eunaMap:hover {
+	width: 500px;
+	padding-left: 20px;
+	background-image: linear-gradient(2deg, #70cdf8, #a7dacc, #c9e99e, #e1f86a);
+	border-radius: 30px;
+	cursor: pointer;
+	box-shadow:  3px 3px 4px #555555;
+}
+
+.eunaMap a{
+	font-family: "scar2";
+	color:white;
+	font-size: 33pt;
+}
+
+.eunaMap a:hover{
+   cursor: pointer;
+   color: #00C853;
+   
+}

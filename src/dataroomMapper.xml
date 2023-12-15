@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kwon.gbraucp2.dataroom.DataroomMapper">
+	<delete id="delete"
+		parameterType="com.kwon.gbraucp2.dataroom.DataroomFile">
+		delete from gbraucp2_dataroom where gd_no=#{gd_no}
+	</delete>
+	<select id="getFile"
+		parameterType="com.kwon.gbraucp2.dataroom.DataroomFile"
+		resultType="java.lang.String">
+		select gd_file 
+		from gbraucp2_dataroom 
+		where gd_no=#{gd_no}
+	</select>
+	<select id="get"
+		parameterType="com.kwon.gbraucp2.dataroom.DataroomFile"
+		resultType="com.kwon.gbraucp2.dataroom.DataroomFile">
+		select *
+		from gbraucp2_dataroom
+		where gd_category=#{gd_category}
+		order by gd_date
+	</select>
+	<insert id="upload"
+		parameterType="com.kwon.gbraucp2.dataroom.DataroomFile">
+		insert into gbraucp2_dataroom
+		values(gbraucp2_dataroom_seq.nextval, #{gd_uploader},
+		#{gd_title}, #{gd_file}, #{gd_category}, sysdate)
+	</insert>
+</mapper>

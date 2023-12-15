@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kwon.gbraucp2.sns.SNSMapper">
+	<delete id="delete" parameterType="com.kwon.gbraucp2.sns.SNSMsg">
+		delete from gbraucp2_sns where gs_no=#{gs_no}
+	</delete>
+	<delete id="deleteReply" parameterType="com.kwon.gbraucp2.sns.SNSReply">
+		delete from gbraucp2_sns_reply where gsr_no=#{gsr_no}
+	</delete>
+	<select id="get" 
+		parameterType="com.kwon.gbraucp2.sns.SNSSelector"
+		resultType="com.kwon.gbraucp2.sns.SNSMsg">
+		select gs_no, gs_writer, gs_txt, gs_date, gs_color, gm_photo
+		from (
+			select *
+			from (
+				select rownum as rn, gs_no, gs_writer, gs_txt, gs_date, gs_color
+				from (
+					select *
+					from gbraucp2_sns
+					where gs_writer like '%'||#{search}||'%' or gs_txt like '%'||#{search}||'%'
+					order by gs_date desc
+				)
+			)
+			where rn &gt;= #{start} and rn &lt;= #{end}
+		), (
+			select gm_id, gm_photo
+			from gbraucp2_member
+			where gm_id in (
+				select gs_writer
+				from (
+					select rownum as rn, gs_writer
+					from (
+						select gs_writer
+						from gbraucp2_sns
+						where gs_writer like '%'||#{search}||'%' or gs_txt like '%'||#{search}||'%'
+						order by gs_date desc
+					)
+				)
+				where rn &gt;= #{start} and rn &lt;= #{end}
+			)
+		)
+		where gs_writer = gm_id
+		order by gs_date desc
+	</select>
+	<select id="getMsgCount" 
+		parameterType="com.kwon.gbraucp2.sns.SNSSelector"
+		resultType="java.lang.Integer">
+		select count(*) 
+		from gbraucp2_sns
+		where gs_writer like '%'||#{search}||'%' 
+			or gs_txt like '%'||#{search}||'%'
+	</select>
+	<select id="getMsgCountByWriter" 
+		parameterType="com.kwon.gbraucp2.member.Member"
+		resultType="java.lang.Integer">
+		select count(*) 
+		from gbraucp2_sns
+		where gs_writer=#{gm_id}
+	</select>
+	<select id="getReply"
+		parameterType="com.kwon.gbraucp2.sns.SNSMsg" 
+		resultType="com.kwon.gbraucp2.sns.SNSReply">
+		select * from gbraucp2_sns_reply where gsr_gs_no=#{gs_no}
+	</select>
+	<update id="update" parameterType="com.kwon.gbraucp2.sns.SNSMsg">
+		update gbraucp2_sns
+		set gs_txt=#{gs_txt}
+		where gs_no=#{gs_no}
+	</update>
+	<insert id="write" parameterType="com.kwon.gbraucp2.sns.SNSMsg">
+		insert into gbraucp2_sns
+		values(gbraucp2_sns_seq.nextval, #{gs_writer}, 
+			#{gs_txt}, sysdate, #{gs_color})
+	</insert>
+	<insert id="writeReply" parameterType="com.kwon.gbraucp2.sns.SNSReply">
+		insert into gbraucp2_sns_reply
+		values(gbraucp2_sns_reply_seq.nextval,
+		#{gsr_gs_no}, #{gsr_writer}, #{gsr_txt}, sysdate)
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+

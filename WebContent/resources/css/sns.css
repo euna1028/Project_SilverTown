@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+#snsControlArea {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	transition: all 0.5s ease-out;
+}
+
+#snsControlAreaHandle {
+	width: 40px;
+	cursor: pointer;
+}
+
+#snsSearchArea1 {
+	background-color: white;
+	border-left: #1754F1 solid 3px;
+	border-top: #1754F1 solid 3px;
+	border-bottom: #1754F1 solid 3px;
+}
+
+#snsSearchArea2 {
+	background-color: white;
+	border-right: #1754F1 solid 3px;
+	border-top: #1754F1 solid 3px;
+	border-bottom: #1754F1 solid 3px;
+}
+
+.snsWriteArea {
+	background-color: transparent;
+	width: 500px;
+	border: #1754F1 solid 3px;
+	font-family: "scar2";
+	font-size: 13pt;
+	color: black;
+}
+
+#snsSearchArea1 .textType {
+	border: none;
+	background-color: transparent;
+	width: 440px;
+	height: 35px;
+	font-family: "scar2";
+	font-size: 20pt;
+	color: black;
+	padding: 7px;
+}
+
+.snsWriteArea .textType {
+	border: none;
+	background-color: transparent;
+	width: 420px;
+	height: 35px;
+	font-family: "scar2";
+	font-size: 13pt;
+	color: black;
+}
+
+.snsWriteArea textarea {
+	color: black;
+	padding: 7px;
+	border: none;
+	background-color: white;
+	width: 430px;
+	height: 120px;
+	font-family: "scar2";
+	font-size: 13pt;
+}
+/**/
+.aSNSMsg {
+	width: 90%;
+	background-color: #00000099;
+	font-family: "scar2";
+	margin: 20px;
+}
+
+.aSNSMsg .imgTd {
+	width: 130px;
+}
+
+.aSNSMsg .writerImg {
+	max-width: 120px;
+}
+
+.aSNSMsg .writerTd {
+	font-size: 17pt;
+	height: 35px;
+	padding-left: 10px;
+}
+
+.aSNSMsg .dateTd {
+	font-size: 10pt;
+	height: 25px;
+	padding-right: 10px;
+}
+
+.aSNSMsg .txtTd {
+	padding: 20px;
+	font-size: 11pt;
+}
+
+.aSNSMsg .replyTd {
+	padding: 20px;
+	font-size: 10pt;
+}
+
+.aSNSMsg .replyTd .writer {
+	margin: 10px;
+}
+
+.aSNSMsg .replyTd .date {
+	font-size: 9pt;
+}
+
+.aSNSMsg .replyTd input {
+	border: none;
+	font-size: 11pt;
+	background-color: transparent;
+	width: 700px;
+	color: white;
+	height: 30px;
+	font-family: "scar2";
+}
+
+.aSNSMsg .replyTd button {
+	border: none;
+	background-color: transparent;
+	font-family: "scar2";
+}
+
+.aSNSMsg .btnImg {
+	width: 30px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.aSNSReply {
+	height: 20px;
+}
+
+#snsL {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 150px;
+	height: 100%;
+	cursor: pointer;
+}
+
+#snsR {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 150px;
+	height: 100%;
+	cursor: pointer;
+}
+
+#snsL:hover, #snsR:hover {
+	background-color: #75757533;
+}
+
+#blackArea {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #00000099;
+	left: -100%;
+	top: -100%;
+	opacity: 0;
+	transition: opacity 0.3s ease-out; 
+}
+
+#x{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

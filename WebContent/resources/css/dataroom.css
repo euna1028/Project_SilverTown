@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+#dataroomFiles {
+	width: 95%;
+	height: 800px;
+	font-family: "scar";
+}
+
+#dataroomFiles td {
+	width: 25%;
+	padding: 7px;
+}
+
+#dataroomFiles table {
+	width: 80%;
+	margin: 10px;
+}
+
+#dataroomFiles div{
+	width: 95%;
+	height: 95%;
+	overflow: scroll;
+}
+
+
+

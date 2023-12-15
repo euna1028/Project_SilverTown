@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+.icon {
+    width: 30px; /* 아이콘의 넓이 설정 */
+    height: 30px; /* 아이콘의 높이 설정 */
+    /* display: inline-block; 인라인 블록 요소로 설정 */ */
+    vertical-align: middle; /* 수직 정렬 설정 */
+}
+
+#loginTbl {
+	font-family: "scar2";
+	height: 50px;
+}
+
+#loginTbl input {
+	font-family: "scar2";
+	border: #1754F1 solid 2px;
+	border-radius: 20px;
+	height: 30px;
+	background-color: white;
+	font-family: "scar2";
+	color: black;
+	font-size: 13pt;
+	width: 200px;
+	text-align: center;
+}
+
+#loginTbl input:hover {
+	font-family: "scar2";
+	border: #1754F1 solid 2px;
+	box-shadow: 0px 0px 15px #84FFFF inset;
+	border-radius: 20px;
+	height: 30px;
+	background-color: white;
+	font-family: "scar2";
+	color: black;
+	font-size: 13pt;
+	width: 200px;
+	text-align: center;
+}
+
+#loginTbl input::placeholder {
+	font-family: "scar2";
+	color: #1754F1;
+}
+
+#loginTbl button, #loginTbl a {
+	border: none;
+	background-color: transparent;
+	font-family: "scar2";
+	color: #424242;
+	font-size: 13pt;
+	cursor: pointer;
+}
+
+#loginTbl a{
+	padding-left: 10px;
+}
+#loginTbl a:hover{
+	color: #1754F1;
+}
+
+
+#loginTbl button:hover{
+	color: #1754F1;
+}
+
+/**/
+#memberJoinTbl {
+	margin-top: 30px;
+	width: 50%;
+	background-color: #ffffff;
+	font-family: "scar";
+	font-size: 14pt;
+	border-radius: 20px; /* 모서리를 둥글게 만들기 위한 속성 */
+	border: 1px solid black; /* 1px 높이의 하늘색 테두리 */
+}
+
+#memberJoinTbl th {
+	font-size: 25pt;
+	padding: 20px;
+	text-shadow: 3px 3px 3px #0080ff;
+}
+
+#memberJoinTbl .textType {
+	border: #808080 solid 1px;
+	width: 80%;
+	height: 45px;
+	background-color: transparent;
+	margin: 5px;
+	font-family: "scar2";
+	font-size: 14pt;
+	color: black;
+	padding-left: 10px;
+}
+
+#memberJoinTbl .jumin1 {
+	border: #808080 solid 1px;
+	width: 120px;
+	height: 45px;
+	background-color: transparent;
+	margin: 5px;
+	font-family: "scar2";
+	font-size: 14pt;
+	color: black;
+	text-align: center;
+}
+
+#memberJoinTbl .jumin2 {
+	border: #808080 solid 1px;
+	width: 15px;
+	height: 45px;
+	background-color: transparent;
+	margin: 5px;
+	font-family: "scar2";
+	font-size: 14pt;
+	color: #00ffff;
+	text-align: center;
+}
+
+#memberJoinTbl .textType::placeholder, #memberJoinTbl .jumin1::placeholder,
+	#memberJoinTbl .jumin2::placeholder {
+	color: #808080;
+	font-family: "scar2";
+}
+
+#memberJoinTbl button {
+	border: none; border-radius : 30px;
+	width: 30%;
+	height: 45px;
+	background-color: #0080ff;
+	margin: 5px;
+	font-family: "scar2";
+	font-size: 13pt;
+	color: white;
+	cursor: pointer;
+	text-shadow: 2px 2px 2px #0080ff;
+	border-radius: 30px;
+}
+
+#memberJoinTbl img {
+	max-width: 40%;
+}
+

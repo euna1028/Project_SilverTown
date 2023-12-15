@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kwon.gbraucp2.member.MemberMapper">
+	<delete id="bye" parameterType="com.kwon.gbraucp2.member.Member">
+		delete from y_member where
+		gm_id=#{gm_id}
+	</delete>
+	<select id="getMemberPWByIDNAME" parameterType="com.kwon.gbraucp2.member.Member"
+		resultType="com.kwon.gbraucp2.member.Member">
+		select * from y_member where gm_id=#{gm_id} and gm_name=#{gm_name}
+	</select>
+	<select id="getMemberByID"
+		parameterType="com.kwon.gbraucp2.member.Member"
+		resultType="com.kwon.gbraucp2.member.Member">
+		select * from y_member where gm_id=#{gm_id}
+	</select>
+	<select id="getMemberIDByID"
+		parameterType="com.kwon.gbraucp2.member.Member"
+		resultType="com.kwon.gbraucp2.member.Member">
+		select gm_id from y_member where gm_id=#{gm_id}
+	</select>
+	<insert id="join"
+		parameterType="com.kwon.gbraucp2.member.Member">
+		insert into y_member
+		values(#{gm_id}, #{gm_pw}, #{gm_name},
+		#{gm_birth}, #{gm_addr}, #{gm_photo}, #{gm_grade}, #{gm_email}, #{gm_gender})
+	</insert>
+	<update id="update"
+		parameterType="com.kwon.gbraucp2.member.Member">
+		update y_member
+		set gm_pw=#{gm_pw}, gm_name=#{gm_name},
+		gm_addr=#{gm_addr}, gm_photo=#{gm_photo}
+		where gm_id=#{gm_id}
+	</update>
+</mapper>
+
+
+
+

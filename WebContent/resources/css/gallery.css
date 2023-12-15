@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#galleryArea{
+	width: 95%;
+	height: 800px;
+	font-family: "scar";
+	color: black;
+}
+#galleryArea .anImg{
+	float: left;
+	width: 170px;
+	margin: 25px;
+	background-color: white;
+	box-shadow: 2px 2px 2px black;
+}
+#galleryArea .anImg td{
+	padding: 10px;
+}
+#galleryArea .anImg img{
+	max-width: 150px;
+	box-shadow: 2px 2px 2px black;
+}

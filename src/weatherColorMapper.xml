@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.kwon.gbraucp2.weathercolor.WeatherColorMapper">
+	<insert id="reg"
+		parameterType="com.kwon.gbraucp2.weathercolor.WeatherColor">
+		insert into gbraucp2_weather_color
+		values(#{gwc_temp},
+		#{gwc_humidity},
+		#{gwc_description}, #{gwc_color})
+	</insert>
+</mapper>

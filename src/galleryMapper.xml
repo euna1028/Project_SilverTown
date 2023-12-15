@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kwon.gbraucp2.gallery.GalleryMapper">
+	<delete id="delete"
+		parameterType="com.kwon.gbraucp2.gallery.GalleryImage">
+		delete from gbraucp2_gallery where gg_no=#{gg_no}
+	</delete>
+	<select id="get"
+		resultType="com.kwon.gbraucp2.gallery.GalleryImage">
+		select * from gbraucp2_gallery order by gg_date desc
+	</select>
+	<select id="getFile"
+		parameterType="com.kwon.gbraucp2.gallery.GalleryImage"
+		resultType="java.lang.String">
+		select gg_file
+		from gbraucp2_gallery
+		where gg_no=#{gg_no}
+	</select>
+	<insert id="upload"
+		parameterType="com.kwon.gbraucp2.gallery.GalleryImage">
+		insert into gbraucp2_gallery
+		values(gbraucp2_gallery_seq.nextval, #{gg_uploader},
+		#{gg_title},
+		#{gg_file}, sysdate)
+	</insert>
+</mapper>

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@font-face{
+	font-family: "scar2";
+	src: url("scar2.TTF");
+}
+::-webkit-scrollbar{
+	display: none;
+}
+
+a{
+	text-decoration: none;
+	color: blue;
+}
+
+body{
+	margin: 0px;	padding: 0px;
+	
+	background-attachment: fixed;
+	background-color: white;
+}
+
+input, button, textarea{
+	outline: none;
+}
+table{
+	border-spacing: 0px;
+}
+textarea{
+	resize: none;
+}
+
+#siteTitleArea{
+	position: fixed;	width: 100%;	top: -50px;
+	transition: top 0.3s ease-out;
+	color: #1754F1;
+}
+
+
+#siteMenu{
+	height: 50px; 	color:#0080ff;
+}
+
+#siteTitleArea table{
+	width: 1200px;
+	color: #1754F1;
+}
+
+#siteTitle a{
+	padding-left: 20px;
+	font-family: "scar2";
+	font-size: 32pt;
+	color: #1754F1;
+	text-shadow: 3px 3px 3px #E3F2FD;
+	transition:all 3s ease-out;
+}
+
+#siteTitle img{
+width: 150px;
+height: 80px;
+}
+
+#siteTitle a:hover{
+	font-family: "scar2";
+	font-size: 28pt;
+	color: #FFD54F;
+	text-shadow: 2px 2px 2px #FFECB3;
+	transition:all 3s ease-out;
+}
+
+#siteContentArea{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 160px;
+	width: 1200px;
+	color:white;
+}
+
+#resultArea{
+	font-family: "scar2";
+	font-size: 13pt;
+	color:#B71C1C;
+	text-shadow: 2px 2px 2px #ff0080;
+}
+#menuTbl{
+	font-family: "scar2";
+	font-size:13pt;
+	color: #FFB300;
+}
+#menuTbl img{
+	max-height: 40px;
+}
+
+#menuTbl a{
+	padding-left:10px;
+	font-family: "scar2";
+	font-size: 15pt;
+	color: #FFB300;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+#menuTbl a:hover{
+	padding-left:10px;
+	font-family: "scar2";
+	font-size: 15pt;
+	color: linear-gradient(25deg, #933b00, #b87600, #dcb005, #ffec0e);
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
